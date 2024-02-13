@@ -23,8 +23,7 @@ WORKDIR="$(pwd)"
 KERNEL="$WORKDIR/kernel"
 
 # Cloning Sources
-git clone --single-branch --depth=1 https://github.com/Asyanx/Sea_Kernel-Fog.git -b fog-r-oss-release $KERNEL && cd $KERNEL
-export LOCALVERSION=3/RedLiens🐙✨
+git clone --single-branch --depth=1 https://github.com/alternoegraha/kernel_xiaomi_fog_14.git -b meme $KERNEL && cd $KERNEL
 
 # Bail out if script fails
 set -e
@@ -54,11 +53,11 @@ KERNEL_DIR="$(pwd)"
 BASEDIR="$(basename "$KERNEL_DIR")"
 
 # The name of the Kernel, to name the ZIP
-ZIPNAME="sea-RedLiens-T1"
+ZIPNAME="Mi680-WWY-Test"
 
 # Build Author
 # Take care, it should be a universal and most probably, case-sensitive
-AUTHOR="Asyanx"
+AUTHOR="alternoegraha"
 
 # Architecture
 ARCH=arm64
@@ -92,8 +91,8 @@ PTTG=1
 if [ $PTTG = 1 ]
 then
 	# Set Telegram Chat ID
-	CHATID="-1001910249307"
-	TOKEN="5501360993:AAFLnvOrkUpsFJktYu-snmimKNoGk7_WVw8"
+	CHATID="-2132871421"
+	TOKEN="6797203948:AAGdVhvcwgpRJkS0gybPbZypmnWJObkpCww"
 fi
 
 # Generate a full DEFCONFIG prior building. 1 is YES | 0 is NO(default)
@@ -196,7 +195,7 @@ WAKTU=$(date +"%F-%S")
 	fi
 
 	msger -n "|| Cloning Anykernel ||"
-	git clone --depth=1 https://github.com/Kentanglu/AnyKernel3-680 -b master AnyKernel3
+	git clone --depth=1 https://github.com/alternoegraha/AnyKernel3-680 -b master AnyKernel3
 
 	if [ $BUILD_DTBO = 1 ]
 	then
